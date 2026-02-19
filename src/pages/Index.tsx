@@ -1,26 +1,24 @@
-import HeroSection from "@/components/HeroSection";
-import FeaturesSection from "@/components/FeaturesSection";
-import TechSection from "@/components/TechSection";
-import TeamSection from "@/components/TeamSection";
-import { Navbar, Footer } from "@/components/NavFooter";
+import DonorHero from "@/components/DonorHero";
+import StatsBar from "@/components/StatsBar";
+import AllocationChart from "@/components/AllocationChart";
+import UtilizationTimeline from "@/components/UtilizationTimeline";
+import ImpactSection from "@/components/ImpactSection";
+import FuturePlans from "@/components/FuturePlans";
+import { DonorNavbar, DonorFooter } from "@/components/DonorNavFooter";
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background relative">
-      {/* Navbar */}
-      <div className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-background/90 to-transparent backdrop-blur-sm border-b border-border/20">
-        <Navbar />
-      </div>
-
-      {/* Main content */}
+    <div className="min-h-screen bg-background">
+      <DonorNavbar />
       <main>
-        <HeroSection />
-        <FeaturesSection />
-        <TechSection />
-        <TeamSection />
+        <DonorHero />
+        <StatsBar />
+        <AllocationChart />
+        <UtilizationTimeline />
+        <ImpactSection />
+        <FuturePlans />
       </main>
-
-      <Footer />
+      <DonorFooter />
     </div>
   );
 };

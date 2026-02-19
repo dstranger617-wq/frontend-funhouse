@@ -8,14 +8,12 @@ export default {
     container: {
       center: true,
       padding: "2rem",
-      screens: {
-        "2xl": "1400px",
-      },
+      screens: { "2xl": "1400px" },
     },
     extend: {
       fontFamily: {
-        sans: ["Space Grotesk", "sans-serif"],
-        mono: ["Space Mono", "monospace"],
+        sans: ["Plus Jakarta Sans", "sans-serif"],
+        display: ["Space Grotesk", "sans-serif"],
       },
       colors: {
         border: "hsl(var(--border))",
@@ -26,6 +24,20 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          50: "hsl(152 60% 96%)",
+          100: "hsl(152 55% 90%)",
+          200: "hsl(152 55% 80%)",
+          600: "hsl(152 65% 36%)",
+          700: "hsl(152 65% 28%)",
+        },
+        amber: {
+          DEFAULT: "hsl(var(--amber))",
+          foreground: "hsl(var(--amber-foreground))",
+          50: "hsl(38 90% 96%)",
+          100: "hsl(38 85% 90%)",
+          400: "hsl(38 95% 60%)",
+          500: "hsl(38 95% 52%)",
+          600: "hsl(32 90% 46%)",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -61,14 +73,13 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        cyan: {
-          glow: "hsl(185 100% 50%)",
-        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "calc(var(--radius) + 4px)",
+        "2xl": "calc(var(--radius) + 8px)",
       },
       keyframes: {
         "accordion-down": {
@@ -79,24 +90,10 @@ export default {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
-        "fade-up": {
-          from: { opacity: "0", transform: "translateY(24px)" },
-          to: { opacity: "1", transform: "translateY(0)" },
-        },
-        shimmer: {
-          "0%": { backgroundPosition: "-200% 0" },
-          "100%": { backgroundPosition: "200% 0" },
-        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
-        "fade-up": "fade-up 0.6s ease-out forwards",
-        shimmer: "shimmer 2.5s linear infinite",
-      },
-      backgroundImage: {
-        "gradient-primary": "linear-gradient(135deg, hsl(185 100% 50%), hsl(200 100% 60%))",
-        "gradient-card": "linear-gradient(135deg, hsl(220 20% 9% / 0.9), hsl(220 20% 6% / 0.95))",
       },
     },
   },
