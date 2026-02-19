@@ -1,12 +1,26 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import HeroSection from "@/components/HeroSection";
+import FeaturesSection from "@/components/FeaturesSection";
+import TechSection from "@/components/TechSection";
+import TeamSection from "@/components/TeamSection";
+import { Navbar, Footer } from "@/components/NavFooter";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background relative">
+      {/* Navbar */}
+      <div className="absolute top-0 left-0 right-0 z-50 bg-gradient-to-b from-background/90 to-transparent backdrop-blur-sm border-b border-border/20">
+        <Navbar />
       </div>
+
+      {/* Main content */}
+      <main>
+        <HeroSection />
+        <FeaturesSection />
+        <TechSection />
+        <TeamSection />
+      </main>
+
+      <Footer />
     </div>
   );
 };
